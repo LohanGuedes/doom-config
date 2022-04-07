@@ -140,26 +140,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Org Mode Customizations. -> System Crafters IIRC
-;; (use-package! org
-;;   :config
-;;   (setq org-ellipsis " ▾"))
-
-;; (use-package! org-superstar
-;;   :after org
-;;   :hook (org-mode . org-superstar-mode)
-;;   :custom
-;;   (org-superstar-remove-leading-stars t)
-;;   (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
-
-;; (set-face-attribute 'org-document-title nil :font "JetBrainsMono Nerd Font" :weight 'bold :height 1.3)
-;; (dolist (face '((org-level-1 . 1.4)
-;;                 (org-level-2 . 1.3)
-;;                 (org-level-3 . 1.2)
-;;                 (org-level-4 . 1.1)
-;;                 (org-level-5 . 1.0)))
-;;   (set-face-attribute (car face) nil :font "JetBrainsMono Nerd Font" :weight 'medium :height (cdr face)))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; Norminette better Defaults ;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -185,9 +165,12 @@
 ;;;;;;; ORG MODE ;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Setting org, org-agenda, org-roam directories
 (setq org-directory "~/MyOrg")
 (after! org-roam
-  (setq org-roam-directory "~/Myorg/Roam"))
+  (setq org-roam-directory "~/MyOrg/Roam")
+  (setq org-agenda-files "~/MyOrg/Agenda"))
+
 
 (after! org
   (after! org-superstar
